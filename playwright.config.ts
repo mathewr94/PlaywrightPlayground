@@ -1,10 +1,11 @@
 import { PlaywrightTestConfig, devices } from '@playwright/test';
 
 const config: PlaywrightTestConfig = {
+  reporter: [ ['html', { open: 'never' }] ],
   forbidOnly: !!process.env.CI,
   retries: process.env.CI ? 2 : 0,
   use: {
-    trace: 'retain-on-failure',
+    trace: 'on',
   },
   projects: [
     {

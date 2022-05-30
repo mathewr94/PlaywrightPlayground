@@ -5,8 +5,7 @@ import { DressesPageInteractions } from "../pageinteractions/DressesPage.interac
 import { ProductInformation } from "../datavalidationclass/ProductInformation";
 import { ProductInformationPageInteractions } from "../pageinteractions/ProductInformationPage.interactions";
 import { CartPageInteractions } from "../pageinteractions/CartPage.interactions";
-
-const { test } = require('@playwright/test');
+import { test } from '@playwright/test';
 
 test('test', async ({ page }) => {
   let onBrowser = new CommonInteractions(page);

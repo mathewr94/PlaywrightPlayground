@@ -28,7 +28,7 @@ export class CartPageInteractions extends CommonInteractions{
     }
 
     private async getCartItemProductInfoByIndex(index: number): Promise<ProductInformation> {
-        let cartItemProductInfo: ProductInformation;
+        let cartItemProductInfo: ProductInformation = new ProductInformation;
         cartItemProductInfo.productSKU = await this.page.locator(CartPage.productSKUs).nth(index).textContent();
         cartItemProductInfo.productName = await this.page.locator(CartPage.productNames).nth(index).textContent();
         cartItemProductInfo.productPrice = await this.page.locator(CartPage.productPrices).nth(index).textContent();
